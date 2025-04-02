@@ -86,14 +86,16 @@
         }
         th {background-color: aquamarine;}
 
+        th, td {padding: 5px;}
+
         td 
         {
             background-color: aqua;
-
         }
         table
         {
-            width: 100%;
+            width: auto;
+            border-spacing: 0;
         }
         form {
             display: flex;
