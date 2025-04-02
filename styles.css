@@ -97,26 +97,45 @@
             display: flex;
             flex-direction: column;
         } 
-         input, textarea {
+         /* input, textarea {
             margin-bottom: 10px;
             padding: 5px;
             border: 1px solid #ccc;
             border-radius: 1px
          } 
-         input, textarea {width: 400px;}
-
-         .submit{background-color:yellow ;}
+         input, textarea {width: 400px;} */
        
-        button {
-            padding: 10px;
-            background: #333;
-            color: white;
+        .submit {
+            background-color: #04AA6D;
             border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
             cursor: pointer;
-            border-radius: 4px;
         }
         button:hover {
             background: #555;
         }
 
-       
+        input {
+            width: auto;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea {
+            width: auto;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            min-height: 100px;
+            resize: vertical;
+            transition: border-color 0.3s ease;
+        }
