@@ -18,13 +18,14 @@
             margin: 0;
             padding: 0;
             background-color: green;
+            font-weight: 200px;
         }
         pre 
         {
             font-family: rial, sans-serif;
             font-size: 15px;
             
-        }
+        } 
         header 
         {
             background: #333;
@@ -65,11 +66,12 @@
 
         #education {background-color: gray;}
         #interests {background-color: plum;}
-        #skills {background-color: brown;}
-        #projects {background-color: greenyellow;}
+        #skills {background-color: lightblue;}
+        #projects {background-color: plum}
         #references {background-color: powderblue;}
         #getin_touch {background-color: palegoldenrod;}
         #about {background-color: paleturquoise;}
+        #contacts {background-color: peru; padding-top: 0.1%;}
 
         footer 
         {
@@ -92,6 +94,7 @@
         {
             background-color: aqua;
         }
+        
         table
         {
             width: auto;
@@ -107,7 +110,7 @@
             border: 1px solid #ccc;
             border-radius: 1px
          } 
-         input, textarea {width: 400px;} */
+         input, textarea {width: 400px;}  */
        
         .submit {
             background-color: #04AA6D;
@@ -117,8 +120,12 @@
             text-decoration: none;
             margin: 4px 2px;
             cursor: pointer;
+            width: 100px;
+            height: 50px;
+            display: block; /* Makes the button a block element */
+            margin: 0 auto; /* Centers horizontally */
         }
-        button:hover {
+        .submit:hover {
             background: #555;
         }
 
@@ -130,6 +137,7 @@
             border-radius: 4px;
             font-size: 14px;
             transition: border-color 0.3s ease;
+            background-color: lightcyan;
         }
 
         textarea {
@@ -142,4 +150,5 @@
             min-height: 100px;
             resize: vertical;
             transition: border-color 0.3s ease;
+            background-color: lightcyan;
         }
