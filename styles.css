@@ -1,4 +1,6 @@
-.container 
+     html{scroll-behavior: smooth;}
+       
+       .container 
         {
             background-color:teal;
             padding: 10px;
@@ -152,3 +154,5 @@
             transition: border-color 0.3s ease;
             background-color: lightcyan;
         }
+
+        
