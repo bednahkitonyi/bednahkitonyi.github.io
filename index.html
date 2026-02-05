@@ -7,6 +7,10 @@
     <meta name="description" content="Bednah Kitonyi - Software QA Engineer. Risk-based testing, test automation, and quality assurance expertise.">
     <title>Bednah Kitonyi - Software QA Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Load theme preference on page load
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+    </script>
 </head>
 <body>
     <header>
@@ -24,6 +28,9 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark theme" title="Toggle dark theme">
+            <span class="theme-icon">🌙</span>
+        </button>
     </header>
 
     <!-- Hero Section -->
@@ -373,5 +380,28 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.querySelector('.theme-icon');
+        
+        function updateThemeIcon() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon();
+        });
+        
+        // Initialize icon on page load
+        updateThemeIcon();
+    </script>
 </body>
 </html>
