@@ -749,13 +749,58 @@ textarea {
 footer {
     background-color: #1a237e;
     color: white;
-    text-align: center;
     padding: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     animation: fadeInUp 0.6s ease-out;
 }
 
-footer p {
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-contact-details {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer-contact-details h3 {
+    color: #b3e5fc;
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+}
+
+.footer-contact-details address {
+    font-style: normal;
+}
+
+.footer-contact-details address p {
+    margin: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+.footer-contact-details a {
+    color: #b3e5fc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-details a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
     margin: 0;
 }
 
