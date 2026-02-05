@@ -33,6 +33,11 @@
         </button>
     </header>
 
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
+        <span>↑</span>
+    </button>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -402,6 +407,24 @@
         
         // Initialize icon on page load
         updateThemeIcon();
+
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 </html>
