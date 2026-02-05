@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bednah Kitonyi Nzimbi">
+    <meta name="description" content="Bednah Kitonyi - Software QA Engineer Resume">
+    <title>Resume - Bednah Kitonyi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .resume-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .resume-header h1 {
+            color: var(--accent-primary);
+            margin: 0;
+        }
+        
+        .resume-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .resume-actions a,
+        .resume-actions button {
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .btn-download {
+            background: var(--accent-primary);
+            color: white;
+        }
+        
+        .btn-download:hover {
+            background: var(--accent-secondary);
+            transform: translateY(-2px);
+        }
+        
+        .btn-back {
+            background: var(--border-color);
+            color: var(--text-primary);
+        }
+        
+        .btn-back:hover {
+            background: var(--accent-light);
+            color: white;
+        }
+        
+        .resume-viewer {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            min-height: 800px;
+        }
+        
+        .resume-viewer iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+        
+        .resume-fallback {
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+        
+        .resume-fallback p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .resume-fallback a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 2rem;
+            background: var(--accent-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .resume-fallback a:hover {
+            background: var(--accent-secondary);
+            transform: translateY(-2px);
+        }
+        
+        @media print {
+            .resume-header,
+            .resume-actions {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        // Load theme preference on page load
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Resume</h1>
+            <p class="tagline">Bednah Kitonyi - Software QA Engineer</p>
+        </div>
+    </header>
+
+    <main class="resume-container">
+        <div class="resume-header">
+            <h1>My Professional Resume</h1>
+            <div class="resume-actions">
+                <a href="/" class="btn-back">← Back to Portfolio</a>
+                <a href="Kitonyi_Resume.pdf" download class="btn-download">📥 Download PDF</a>
+            </div>
+        </div>
+
+        <div class="resume-viewer">
+            <iframe 
+                src="https://docs.google.com/gviewer?url=https://bednahkitonyi.github.io/Kitonyi_Resume.pdf&embedded=true" 
+                allowfullscreen>
+            </iframe>
+            <div class="resume-fallback" style="display: none;">
+                <p>Unable to display PDF in browser.</p>
+                <p>Please <a href="Kitonyi_Resume.pdf" download>download the resume</a> to view it.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 3rem;">
+        <div class="footer-content">
+            <div class="footer-contact-details">
+                <h3>Contact Information</h3>
+                <address>
+                    <p><strong>Email:</strong> <a href="mailto:bednahkitonyi@gmail.com">bednahkitonyi@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+254727523766">+254 727 523 766</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bednah-nzimbi/" target="_blank" rel="noopener noreferrer">Bednah Nzimbi</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer">bednahkitonyi</a></p>
+                </address>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bednah Kitonyi | Software QA Engineer</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            const themeIcon = document.querySelector('.theme-icon');
+            
+            function updateThemeIcon() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+            }
+            
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon();
+            });
+            
+            updateThemeIcon();
+        }
+
+        // Handle iframe fallback if PDF viewer is blocked
+        const iframes = document.querySelectorAll('iframe');
+        iframes.forEach(iframe => {
+            iframe.addEventListener('error', () => {
+                iframe.style.display = 'none';
+                iframe.nextElementSibling.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
