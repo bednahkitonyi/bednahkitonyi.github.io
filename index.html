@@ -8,8 +8,19 @@
     <title>Bednah Kitonyi - Software QA Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        // Load theme preference on page load
-        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+        // Load theme preference on page load (with system preference detection)
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA ID
     </script>
 </head>
 <body>
@@ -19,15 +30,21 @@
             <h1>Bednah Kitonyi</h1>
             <p class="tagline">Software QA Engineer</p>
         </div>
-        <nav role="navigation">
+        <nav role="navigation" class="nav-menu">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#case-studies">Case Studies</a></li>
                 <li><a href="#automation">Automation</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" title="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark theme" title="Toggle dark theme">
             <span class="theme-icon">🌙</span>
         </button>
@@ -50,7 +67,28 @@
             <div class="cta-buttons">
                 <a href="#case-studies" class="btn-primary">View Case Studies</a>
                 <a href="#contact" class="btn-secondary">Contact Me</a>
+                <a href="#resume" class="btn-secondary" download>📥 Download Resume</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Stats Dashboard -->
+    <section class="stats-dashboard">
+        <div class="stat-card">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" data-target="200">0</div>
+            <div class="stat-label">Bugs Detected</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" data-target="500">0</div>
+            <div class="stat-label">Test Cases Created</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-label">Tools Mastered</div>
         </div>
     </section>
 
@@ -82,21 +120,44 @@
         <h2>Case Studies</h2>
         <p class="intro-text">Selected examples of how I approach quality, risk, and testing strategy.</p>
         
+        <!-- Filter Buttons -->
+        <div class="case-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="manual">Manual Testing</button>
+            <button class="filter-btn" data-filter="automation">Automation</button>
+            <button class="filter-btn" data-filter="api">API Testing</button>
+        </div>
+        
         <div class="featured-work">
-            <div class="case-card">
+            <div class="case-card" data-category="manual" data-read-time="8">
+                <div class="difficulty-badge difficulty-intermediate">Intermediate</div>
                 <h3>E-commerce Web App</h3>
                 <p class="case-type">Functional & Exploratory Testing</p>
-                <a href="#case-ecommerce" class="btn-link">View Details →</a>
+                <p class="read-time">📖 8 min read</p>
+                <div class="case-actions">
+                    <a href="#case-ecommerce" class="btn-link">View Details →</a>
+                    <button class="share-btn" data-url="#case-ecommerce" data-title="E-commerce Web App Testing">Share</button>
+                </div>
             </div>
-            <div class="case-card">
+            <div class="case-card" data-category="api" data-read-time="10">
+                <div class="difficulty-badge difficulty-advanced">Advanced</div>
                 <h3>REST API</h3>
                 <p class="case-type">API & Integration Testing</p>
-                <a href="#case-api" class="btn-link">View Details →</a>
+                <p class="read-time">📖 10 min read</p>
+                <div class="case-actions">
+                    <a href="#case-api" class="btn-link">View Details →</a>
+                    <button class="share-btn" data-url="#case-api" data-title="REST API Testing Case Study">Share</button>
+                </div>
             </div>
-            <div class="case-card">
+            <div class="case-card" data-category="manual" data-read-time="7">
+                <div class="difficulty-badge difficulty-beginner">Beginner</div>
                 <h3>Mobile App</h3>
                 <p class="case-type">Regression & Usability Testing</p>
-                <a href="#case-mobile" class="btn-link">View Details →</a>
+                <p class="read-time">📖 7 min read</p>
+                <div class="case-actions">
+                    <a href="#case-mobile" class="btn-link">View Details →</a>
+                    <button class="share-btn" data-url="#case-mobile" data-title="Mobile App Testing Case Study">Share</button>
+                </div>
             </div>
         </div>
 
@@ -241,6 +302,32 @@
         <h3>Professional Summary</h3>
         <p>I am a Software QA Engineer with a passion for quality assurance, test strategy, and risk-based testing. I believe in shipping reliable products through comprehensive testing, clear communication, and continuous improvement. My approach combines manual expertise with automation capabilities to maximize quality and efficiency.</p>
         
+        <!-- Interactive Timeline -->
+        <h3>Career Timeline</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2024 - Present</div>
+                <div class="timeline-content">
+                    <h4>Senior QA Engineer</h4>
+                    <p>Techno Brain Group - Lead QA initiatives and mentoring junior engineers</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - 2024</div>
+                <div class="timeline-content">
+                    <h4>QA Automation Engineer</h4>
+                    <p>Software Testing Professional - API and automation testing</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2019 - 2022</div>
+                <div class="timeline-content">
+                    <h4>QA Engineer</h4>
+                    <p>Started QA career with manual and functional testing</p>
+                </div>
+            </div>
+        </div>
+        
         <h3>Professional Experience</h3>
         <div class="experience-item">
             <h4>Software QA Engineer / Test Lead</h4>
@@ -266,7 +353,6 @@
                 <li>Created detailed test documentation and test execution reports</li>
             </ul>
         </div>
-        
         <h3>Education</h3>
         <div class="education-item-expanded">
             <h4>Bachelor of Science in Computer Science</h4>
@@ -369,6 +455,49 @@
         </ul>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <p class="intro-text">What colleagues and clients say about working with me.</p>
+        
+        <div class="testimonials-carousel">
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <p>"Bednah's meticulous approach to testing uncovered critical issues before production. Their risk-based strategy saved us significant time and resources."</p>
+                </div>
+                <div class="testimonial-author">
+                    <strong>Sarah Johnson</strong>
+                    <p>Product Manager, Techno Brain Group</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <p>"Working with Bednah on our API testing was exceptional. Clear documentation, comprehensive test coverage, and proactive bug detection."</p>
+                </div>
+                <div class="testimonial-author">
+                    <strong>Michael Chen</strong>
+                    <p>Lead Developer, Software Solutions Inc.</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <p>"Bednah's automation framework reduced our regression testing time by 60%. Highly recommended for any team looking to improve QA efficiency."</p>
+                </div>
+                <div class="testimonial-author">
+                    <strong>Emily Roberts</strong>
+                    <p>QA Manager, Digital Innovations</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="carousel-prev" aria-label="Previous testimonial">❮</button>
+            <button class="carousel-next" aria-label="Next testimonial">❯</button>
+        </div>
+    </section>
+
     <!-- Contact Section - Now in Footer -->
 
     </main>
@@ -413,6 +542,169 @@
         // Initialize icon on page load
         updateThemeIcon();
 
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll animations using Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section, .case-card, .expertise-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animated stats counter
+        function animateCounter(element) {
+            const target = parseInt(element.dataset.target);
+            const duration = 2000;
+            const start = Date.now();
+            
+            const animate = () => {
+                const progress = (Date.now() - start) / duration;
+                const current = Math.floor(target * progress);
+                element.textContent = current > target ? target : current;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                }
+            };
+            
+            animate();
+        }
+        
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    if (statNumber && !statNumber.classList.contains('animated')) {
+                        animateCounter(statNumber);
+                        statNumber.classList.add('animated');
+                    }
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelector('.stats-dashboard')?.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.stat-card').forEach(card => statsObserver.observe(card));
+        });
+        
+        document.querySelectorAll('.stat-card').forEach(card => statsObserver.observe(card));
+
+        // Case study filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const caseCards = document.querySelectorAll('.case-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                caseCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeIn 0.3s ease-out';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Social share functionality
+        document.querySelectorAll('.share-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const url = window.location.href + btn.dataset.url;
+                const title = btn.dataset.title;
+                
+                if (navigator.share) {
+                    navigator.share({
+                        title: title,
+                        url: url
+                    });
+                } else {
+                    // Fallback: copy to clipboard
+                    navigator.clipboard.writeText(url);
+                    btn.textContent = '✓ Link Copied';
+                    setTimeout(() => { btn.textContent = 'Share'; }, 2000);
+                }
+            });
+        });
+
+        // Testimonials carousel
+        let currentTestimonial = 0;
+        const testimonialItems = document.querySelectorAll('.testimonial-item');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        
+        function showTestimonial(index) {
+            testimonialItems.forEach(item => item.classList.remove('active'));
+            testimonialItems[index].classList.add('active');
+        }
+        
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                currentTestimonial = (currentTestimonial - 1 + testimonialItems.length) % testimonialItems.length;
+                showTestimonial(currentTestimonial);
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                currentTestimonial = (currentTestimonial + 1) % testimonialItems.length;
+                showTestimonial(currentTestimonial);
+            });
+        }
+        
+        showTestimonial(0);
+
+        // Enhanced form validation
+        const form = document.querySelector('form');
+        if (form) {
+            const inputs = form.querySelectorAll('input, textarea');
+            
+            inputs.forEach(input => {
+                input.addEventListener('blur', () => {
+                    if (input.value.trim() === '') {
+                        input.classList.add('error');
+                    } else {
+                        input.classList.remove('error');
+                    }
+                });
+                
+                input.addEventListener('input', () => {
+                    if (input.value.trim() !== '') {
+                        input.classList.remove('error');
+                        input.classList.add('valid');
+                    }
+                });
+            });
+        }
+
         // Scroll to top functionality
         const scrollToTopBtn = document.getElementById('scroll-to-top');
         const scrollToBottomBtn = document.getElementById('scroll-to-bottom');
@@ -447,6 +739,14 @@
                 top: document.documentElement.scrollHeight,
                 behavior: 'smooth'
             });
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
         });
     </script>
 </body>

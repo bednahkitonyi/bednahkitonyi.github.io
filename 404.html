@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .error-message {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .error-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .error-actions a {
+            padding: 0.9rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-home {
+            background: var(--accent-primary);
+            color: white;
+        }
+        
+        .btn-home:hover {
+            background: var(--accent-secondary);
+            transform: translateY(-2px);
+        }
+        
+        .btn-contact {
+            border: 2px solid var(--accent-primary);
+            color: var(--accent-primary);
+        }
+        
+        .btn-contact:hover {
+            background: var(--accent-primary);
+            color: white;
+        }
+    </style>
+    <script>
+        // Load theme preference on page load
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-code">404</div>
+        <h1 class="error-message">Oops! Page Not Found</h1>
+        <p class="error-description">
+            The page you're looking for doesn't exist or has been moved. 
+            Let's get you back on track!
+        </p>
+        <div class="error-actions">
+            <a href="/" class="btn-home">← Back to Home</a>
+            <a href="/#contact" class="btn-contact">Contact Me →</a>
+        </div>
+    </div>
+</body>
+</html>
