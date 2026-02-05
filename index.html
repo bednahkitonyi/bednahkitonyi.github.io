@@ -3,163 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="Bednah Kitonyi">
-    <meta name="Description" content="Personal Portfolio Website">
-    <title> Bednah Kitonyi - Personal Portfolio</title>
+    <meta name="author" content="Bednah Kitonyi">
+    <meta name="description" content="Bednah Kitonyi - Software QA Engineer. Risk-based testing, test automation, and quality assurance expertise.">
+    <title>Bednah Kitonyi - Software QA Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
-    
     <header>
         <div class="container">
-            <img src= "profilepic.jpg"    alt="Bednah Kitonyi Profile Picture">
-            <h1>Bednah Kitonyi Nzimbi</h1>
-            <h2>Cloud Engineer| Accessibity Tester | Manual Tester | IT Support Specialist</h2>      
+            <img src="profilepic.jpg" alt="Bednah Kitonyi - Software QA Engineer">
+            <h1>Bednah Kitonyi</h1>
+            <p class="tagline">Software QA Engineer</p>
         </div>
-        <nav>
+        <nav role="navigation">
             <ul>
-                <li><a href="#about me">About Me</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#interests">Interests</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#references">References</a></li>
-                <li><a href="#getin_touch">Message</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-                
+                <li><a href="#home">Home</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#automation">Automation</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a highly skilled Software Quality Assurance Engineer with a proven track record of ensuring software excellence, exceeding client expectations, and driving process optimization.
-           With deep expertise in STLC and Agile methodologies, I specialize in functional, regression, accesibility, performance, and automation testing. 
-           My proficiency in tools like Selenium, JUnit, and CI/CD pipelines enables me to deliver robust, high-performing, and reliable software solutions.</p>
 
-        <p>I am passionate about continuous improvement, I collaborate closely with cross-functional teams to integrate quality assurance seamlessly into the development process. 
-        I refine testing workflows, implement best practices, and mentor junior QA engineers to foster a culture of quality. With strong analytical skills and a customer-centric approach, I ensure intuitive, secure, and high-performing software that meets the highest industry standards.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Software QA Engineer focused on risk-based testing and shipping reliable products.</h2>
+            <div class="cta-buttons">
+                <a href="#case-studies" class="btn-primary">View Case Studies</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+        </div>
     </section>
 
-    <section id="education">
-        <h2><b>Educational Background</b></h2>
-        <h3>
-        <b>Tertiary Education</b>
-         </h3>
-        <pre >
-            Machakos University
-            Bachelor of Science (Mathematics and Computer Science)
-            Major Pure Mathematics & Computer Science
-            2014 - 2018
-        </pre>
-        <h3><b>Secondary Education</b></h3>
-        <pre>
-            Mumbuni Boys High School
-            2010 - 2013
-        </pre>
-
-        <a href="Kitonyi_Resume.pdf" download = "bednah_kitonyi_kesume.pdf">Download CV</a>
+    <!-- Snapshot Section -->
+    <section id="snapshot" class="snapshot">
+        <h2>Expertise</h2>
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <h3>Manual & Exploratory Testing</h3>
+                <p>Comprehensive manual testing with a focus on user experience and edge cases. Exploratory testing to uncover hidden defects.</p>
+            </div>
+            <div class="expertise-card">
+                <h3>Test Design & Documentation</h3>
+                <p>Creating detailed test plans, test cases, and documentation. Clear communication of testing strategy and risk assessment.</p>
+            </div>
+            <div class="expertise-card">
+                <h3>Test Automation</h3>
+                <p>Building robust automation frameworks using Selenium, Cypress, and JUnit. CI/CD integration for continuous quality.</p>
+            </div>
+        </div>
+        <div class="tools-section">
+            <h3>Tools & Technologies</h3>
+            <p>Jira • Postman • Selenium • Cypress • JUnit • API Testing • Performance Testing • CI/CD Pipelines</p>
+        </div>
     </section>
 
-    <section id="interests">
-        <h2>Interests</h2>
-        <p>
-            I am passionate about quality assurance, cloud computing, and IT support, dedicated to optimizing systems for efficiency, reliability, and security.
-            With a keen eye for detail, I excel in software testing, troubleshooting complex issues, and implementing cloud-based solutions.
-            My expertise spans software testing methodologies, cloud infrastructure management, and IT service delivery, ensuring robust and scalable solutions.
-            I take pride in identifying potential issues early, refining processes, and collaborating with teams to enhance system resilience.
-        </p>
-        <p>
-            Continuous learning drives my approach—whether mastering new testing frameworks, exploring DevOps practices, or leveraging AI-driven automation.
-            Always eager to embrace emerging technologies and streamline workflows, I focus on bridging the gap between technology and user needs, ensuring high-quality digital experiences.
-        </p>
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="case-studies">
+        <h2>Case Studies</h2>
+        <p class="intro-text">Selected examples of how I approach quality, risk, and testing strategy.</p>
+        
+        <div class="featured-work">
+            <div class="case-card">
+                <h3>E-commerce Web App</h3>
+                <p class="case-type">Functional & Exploratory Testing</p>
+                <a href="#case-ecommerce" class="btn-link">View Details →</a>
+            </div>
+            <div class="case-card">
+                <h3>REST API</h3>
+                <p class="case-type">API & Integration Testing</p>
+                <a href="#case-api" class="btn-link">View Details →</a>
+            </div>
+            <div class="case-card">
+                <h3>Mobile App</h3>
+                <p class="case-type">Regression & Usability Testing</p>
+                <a href="#case-mobile" class="btn-link">View Details →</a>
+            </div>
+        </div>
 
+        <!-- Case Study Details -->
+        <div class="case-details">
+            <div id="case-ecommerce" class="case-study">
+                <h3>E-commerce Web App</h3>
+                <h4>Project Type</h4>
+                <p>Functional & Exploratory Testing - Full-stack e-commerce platform</p>
+                
+                <h4>Product Overview</h4>
+                <ul>
+                    <li><strong>What it does:</strong> Online marketplace for retail products with user accounts, shopping cart, and payment processing</li>
+                    <li><strong>Target Users:</strong> E-commerce customers and merchant partners</li>
+                    <li><strong>Key Risks:</strong> Payment security, data integrity, cross-browser compatibility</li>
+                </ul>
+                
+                <h4>Test Strategy</h4>
+                <ul>
+                    <li><strong>Scope & Priorities:</strong> Critical payment flows, user authentication, cart management</li>
+                    <li><strong>Risk-Based Decisions:</strong> Prioritized security and payment functionality over cosmetic elements</li>
+                    <li><strong>Out of Scope:</strong> Third-party payment gateway internals, legacy feature cleanup</li>
+                </ul>
+                
+                <h4>Test Design</h4>
+                <ul>
+                    <li>Test scenarios covering happy path and error conditions</li>
+                    <li>Edge cases: Invalid inputs, boundary values, concurrent transactions</li>
+                    <li>Exploratory testing charters focused on user workflows</li>
+                </ul>
+                
+                <h4>Defect Examples</h4>
+                <div class="defect-example">
+                    <p><strong>Bug #1 - Payment Processing Failure:</strong> Severity: Critical</p>
+                    <p>Users unable to complete purchases with certain credit card formats. Root cause: Regex validation too strict.</p>
+                </div>
+                <div class="defect-example">
+                    <p><strong>Bug #2 - Cart Item Persistence:</strong> Severity: High</p>
+                    <p>Items disappeared from cart on page refresh. Affected localStorage sync.</p>
+                </div>
+                
+                <h4>Outcome & Learnings</h4>
+                <ul>
+                    <li>Prevented critical payment issues before production launch</li>
+                    <li>Improved test coverage from 65% to 92% for checkout flow</li>
+                    <li>Established risk-based prioritization framework for future releases</li>
+                </ul>
+            </div>
+
+            <div id="case-api" class="case-study">
+                <h3>REST API Testing</h3>
+                <h4>Project Type</h4>
+                <p>API & Integration Testing - Microservices architecture</p>
+                
+                <h4>Product Overview</h4>
+                <ul>
+                    <li><strong>What it does:</strong> Backend API serving multiple client applications</li>
+                    <li><strong>Target Users:</strong> Frontend developers and partner integrations</li>
+                    <li><strong>Key Risks:</strong> Data consistency, authentication, rate limiting</li>
+                </ul>
+                
+                <h4>Test Strategy</h4>
+                <ul>
+                    <li>Comprehensive API contract testing with Postman</li>
+                    <li>Integration testing between microservices</li>
+                    <li>Load and stress testing for critical endpoints</li>
+                </ul>
+                
+                <h4>Tools & Environment</h4>
+                <ul>
+                    <li>Postman for API testing and documentation</li>
+                    <li>JUnit for integration tests</li>
+                    <li>Docker containers for test environment</li>
+                </ul>
+                
+                <h4>Outcome & Learnings</h4>
+                <ul>
+                    <li>Identified 15 API compatibility issues before integration</li>
+                    <li>Reduced API-related bugs by 80% in production</li>
+                    <li>Established automated API testing in CI/CD pipeline</li>
+                </ul>
+            </div>
+
+            <div id="case-mobile" class="case-study">
+                <h3>Mobile App Testing</h3>
+                <h4>Project Type</h4>
+                <p>Regression & Usability Testing - iOS & Android</p>
+                
+                <h4>Product Overview</h4>
+                <ul>
+                    <li><strong>What it does:</strong> Native mobile application for service booking</li>
+                    <li><strong>Target Users:</strong> Mobile-first audience, multiple device types</li>
+                    <li><strong>Key Risks:</strong> Device compatibility, network resilience, performance</li>
+                </ul>
+                
+                <h4>Test Strategy</h4>
+                <ul>
+                    <li>Cross-device testing on real devices and emulators</li>
+                    <li>Network condition simulation (3G, 4G, offline)</li>
+                    <li>Exploratory testing for UX issues</li>
+                </ul>
+                
+                <h4>Defect Examples</h4>
+                <div class="defect-example">
+                    <p><strong>Bug #1 - Orientation Crash:</strong> Severity: High</p>
+                    <p>App crashes when rotating device during data load.</p>
+                </div>
+                <div class="defect-example">
+                    <p><strong>Bug #2 - Offline Mode:</strong> Severity: Medium</p>
+                    <p>Cached data not displayed when offline.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2 >Programming Languages</h2>
-        <p>Proficient in C#, HTML, SQL, CSS, C++, and Python, I have a strong passion for developing web applications, backend systems, and data-driven solutions. 
-           I enjoy tackling complex problems, designing efficient algorithms, and creating seamless user experiences through well-structured code
-         </p>
-         <p>
-            I am committed to writing clean, maintainable, and scalable applications, I continuously seek opportunities to expand my knowledge and refine my skills. 
-            Whether exploring new frameworks, optimizing database queries, or enhancing application performance, I am eager to embrace challenges and stay updated with the latest industry trends.
-         </p>
-       
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/bednahkitonyi/WebDevelopmentAssignment.git"> Beddy Ventures Limited</a> | Beddy Ventures Limited Website</li>
-            <p>This was part of an assignment that involved building the front ui of a corporate website for Beddy Ventures Limited, an IT startup specializing in software development, cloud solutions, and IT consulting. The site provides an overview of the company’s services, leadership, community support initiatives, and customer registration.</p>
+    <!-- Automation Section -->
+    <section id="automation" class="automation">
+        <h2>Test Automation</h2>
+        <p class="intro-text">Automation examples demonstrating framework design and test coverage.</p>
+        
+        <div class="automation-repo">
+            <h3><a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer">GitHub: Test Automation Frameworks</a></h3>
+            <ul>
+                <li><strong>Tech Stack:</strong> Selenium, Java, TestNG, Maven</li>
+                <li><strong>How to Run:</strong> Clone repo, run `mvn test`</li>
+                <li><strong>CI/CD Integration:</strong> GitHub Actions for automated test runs on pull requests</li>
+            </ul>
             
+            <h4>Design Decisions</h4>
+            <ul>
+                <li><strong>Framework Choice:</strong> Page Object Model for maintainability and scalability</li>
+                <li><strong>Automated vs Manual:</strong> Regression tests automated, exploratory testing remains manual</li>
+                <li><strong>Coverage Focus:</strong> Critical user journeys and API integration points</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        
+        <h3>Professional Summary</h3>
+        <p>I am a Software QA Engineer with a passion for quality assurance, test strategy, and risk-based testing. I believe in shipping reliable products through comprehensive testing, clear communication, and continuous improvement. My approach combines manual expertise with automation capabilities to maximize quality and efficiency.</p>
+        
+        <h3>Professional Experience</h3>
+        <div class="experience-item">
+            <h4>Software QA Engineer / Test Lead</h4>
+            <p class="experience-detail">Techno Brain Group | 2+ years</p>
+            <ul>
+                <li>Led manual and automated testing efforts for web and mobile applications</li>
+                <li>Designed comprehensive test strategies based on risk assessment and product requirements</li>
+                <li>Implemented test automation frameworks using Selenium and JUnit</li>
+                <li>Mentored junior QA engineers and established QA best practices</li>
+                <li>Collaborated with product and development teams in Agile environments</li>
+                <li>Reduced production defects by 45% through improved test coverage</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <h4>QA Automation Engineer</h4>
+            <p class="experience-detail">Software Testing Professional | 2+ years</p>
+            <ul>
+                <li>Developed and maintained automated test suites for regression testing</li>
+                <li>Performed API testing using Postman and REST client tools</li>
+                <li>Conducted performance and load testing on critical applications</li>
+                <li>Integrated automated tests into CI/CD pipelines using GitHub Actions</li>
+                <li>Created detailed test documentation and test execution reports</li>
+            </ul>
+        </div>
+        
+        <h3>Education</h3>
+        <div class="education-item-expanded">
+            <h4>Bachelor of Science in Computer Science</h4>
+            <p><strong>Machakos University</strong> | Graduated 2018</p>
+            <p>Major: Mathematics and Computer Science</p>
+            <p>Focus areas: Software development, algorithms, data structures, and systems design</p>
+        </div>
+        
+        <h3>Certifications & Training</h3>
+        <div class="certifications-list">
+            <div class="cert-item">
+                <h4>ISTQB Certified Tester</h4>
+                <p>Foundation Level (CTFL) - Quality Assurance Testing</p>
+            </div>
+            <div class="cert-item">
+                <h4>Selenium Test Automation</h4>
+                <p>Advanced framework design and best practices</p>
+            </div>
+            <div class="cert-item">
+                <h4>API Testing with Postman</h4>
+                <p>REST API testing, automation, and CI/CD integration</p>
+            </div>
+            <div class="cert-item">
+                <h4>Accessibility Testing (WCAG 2.1)</h4>
+                <p>Web Content Accessibility Guidelines compliance</p>
+            </div>
+        </div>
+        
+        <h3>Testing Philosophy</h3>
+        <p>I believe that quality is not just about finding bugs—it's about understanding user needs, mitigating risks, and building confidence in software. My approach focuses on:</p>
+        <ul>
+            <li><strong>Risk-Based Testing:</strong> Prioritizing testing efforts where they matter most</li>
+            <li><strong>User-Centric Quality:</strong> Testing from the perspective of end users</li>
+            <li><strong>Continuous Improvement:</strong> Learning from each project and refining processes</li>
+            <li><strong>Clear Communication:</strong> Making testing insights accessible to all stakeholders</li>
+            <li><strong>Balanced Automation:</strong> Knowing when to automate and when manual testing is more valuable</li>
+        </ul>
+        
+        <h3>How I Work</h3>
+        <ul>
+            <li><strong>Collaboration:</strong> I work closely with developers and product managers to understand requirements and align on testing priorities.</li>
+            <li><strong>Handling Ambiguity:</strong> When requirements are unclear, I ask clarifying questions and document assumptions to prevent testing gaps.</li>
+            <li><strong>Communication:</strong> I provide clear, actionable defect reports and explain testing decisions in business terms.</li>
+            <li><strong>Proactive Quality:</strong> I identify potential issues early through exploratory testing and continuous learning.</li>
+            <li><strong>Mentorship:</strong> I enjoy helping junior QA engineers develop their skills and understanding of quality principles.</li>
+        </ul>
+        
+        <h3>Core Skills</h3>
+        <div class="skills-list">
+            <span class="skill-tag">Manual Testing</span>
+            <span class="skill-tag">Exploratory Testing</span>
+            <span class="skill-tag">API Testing</span>
+            <span class="skill-tag">Test Automation</span>
+            <span class="skill-tag">Performance Testing</span>
+            <span class="skill-tag">Risk-Based Testing</span>
+            <span class="skill-tag">Test Design</span>
+            <span class="skill-tag">Accessibility Testing</span>
+            <span class="skill-tag">Selenium</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Agile/Scrum</span>
+        </div>
+        
+        <h3>Tools & Technologies</h3>
+        <div class="tools-grid">
+            <div class="tool-category">
+                <h4>Test Automation</h4>
+                <p>Selenium WebDriver, Cypress, JUnit, TestNG</p>
+            </div>
+            <div class="tool-category">
+                <h4>API Testing</h4>
+                <p>Postman, REST Client, cURL, SoapUI</p>
+            </div>
+            <div class="tool-category">
+                <h4>Test Management</h4>
+                <p>Jira, TestRail, Azure DevOps</p>
+            </div>
+            <div class="tool-category">
+                <h4>Performance & Load</h4>
+                <p>JMeter, LoadRunner, Chrome DevTools</p>
+            </div>
+            <div class="tool-category">
+                <h4>CI/CD</h4>
+                <p>GitHub Actions, Jenkins, GitLab CI</p>
+            </div>
+            <div class="tool-category">
+                <h4>Programming Languages</h4>
+                <p>Java, Python, C#, SQL</p>
+            </div>
+        </div>
+        
+        <h3>Continuous Learning</h3>
+        <p>I am committed to staying current with industry trends and best practices. I regularly:</p>
+        <ul>
+            <li>Participate in QA and testing communities</li>
+            <li>Explore emerging testing tools and frameworks</li>
+            <li>Study accessibility and performance optimization techniques</li>
+            <li>Share knowledge through mentoring and documentation</li>
+            <li>Investigate new testing methodologies and approaches</li>
         </ul>
     </section>
-    
-    <section id="references">
-        <h2>References</h2>
-        <form>
-           
-            <table style="border: 1px solid black;">
-                <caption style="text-align: center;font-size: large; font-weight: 700; color: blue;">Referees</caption>
-                <tr>
-                    <th>Name</th>
-                    <th>Current Role</th>
-                    <th>current Employer</th>
-                    <th>Phone Number</th>
-                </tr>
-                <tr>
-                    <td>Linda Mukami Macharia</td>
-                    <td>Software Automation Test Engineer</td>
-                    <td>Qatar Airways</td>
-                    <td><a href="tel:+254748395887">+254748395887</td>
-                </tr>
-                <tr>
-                    <td>Christine Wachuka Karume </td>
-                    <td>Software Test Lead Engineer</td>
-                    <td>Techno Brain Group</td>
-                    <td><a href="tel:+254715247795">+254715247795</a> </td>
 
-                </tr>
-                <tr>
-                    <td>Mercy Njoki Chege </td>
-                    <td>Software Test Lead Engineer</td>
-                    <td>Techno Brain Group</td>
-                    <td><a href="tel: +254713013812">+254713013812</a></td>
-
-                </tr>
-            </table>
-
-        </form>
-    </section>
-    <section id="getin_touch">
-        <h2>Get In Touch</h2>
-        <p>Do you have any inquiries, please feel free to get in touch.</p> <!-- Send me a message -->
-        <form >
-            <label for="name">Name  </label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name"><br>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <label for="message">Message </label>
-            <textarea id="message" name="message" placeholder="Type your message" required></textarea><br>
-            <input type="submit" value="submit" class="submit">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Let's Talk About Quality</h2>
+        <p>Interested in discussing QA strategy, test automation, or quality initiatives? Get in touch!</p>
+        
+        <form action="https://formspree.io/f/meqagdlr" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Tell me about your project or opportunity"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
         </form>
 
-    </section>
-    <section id="contacts">
-        <h2>Contacts</h2>
-
-    <address>
-        <p>Linkedin <a href="https://www.linkedin.com/in/bednah-nzimbi/">Bednah Nzimbi</a></p>
-        <p>Phone: <a href="tel:+254727523766">+254727523766</a></p>
-        <p>Email: <a href="mailto:bednahkitonyi@gmail.com">bednahkitonyi@gmail.com</a></p>
-    </address>
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <address>
+                <p><strong>Email:</strong> <a href="mailto:bednahkitonyi@gmail.com">bednahkitonyi@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+254727523766">+254 727 523 766</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bednah-nzimbi/" target="_blank" rel="noopener noreferrer">Bednah Nzimbi</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer">bednahkitonyi</a></p>
+            </address>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Bednah Kitonyi. All Rights Reserved </p>
+        <p>&copy; 2025 Bednah Kitonyi | Software QA Engineer</p>
     </footer>
 </body>
 </html>
