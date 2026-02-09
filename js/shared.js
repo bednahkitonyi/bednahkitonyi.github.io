@@ -21,6 +21,30 @@ if (themeToggle) {
     updateThemeIcon();
 }
 
+// Sticky header on scroll
+const header = document.getElementById('main-header');
+if (header) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
+
+// Set active nav link based on current page
+const currentLocation = location.pathname;
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    if (link.href.includes(currentLocation) || 
+        (currentLocation === '/' && link.href.includes('index.html'))) {
+        link.classList.add('active');
+    } else {
+        link.classList.remove('active');
+    }
+});
+
 // Hamburger menu toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -37,6 +61,23 @@ if (hamburger && navMenu) {
             navMenu.classList.remove('active');
             hamburger.classList.remove('active');
         });
+    });
+}
+
+// Animate CTA buttons with staggered delays
+const ctaButtons = document.querySelectorAll('.cta-buttons a');
+ctaButtons.forEach((btn, index) => {
+    btn.style.setProperty('--button-index', index);
+});
+
+// Scroll indicator click handler
+const scrollIndicator = document.querySelector('.scroll-indicator');
+if (scrollIndicator) {
+    scrollIndicator.addEventListener('click', () => {
+        const nextSection = document.querySelector('.stats-dashboard');
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 }
 

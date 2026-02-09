@@ -15,29 +15,37 @@
     </script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="profilepic.jpg" alt="Bednah Kitonyi - Software QA Engineer">
-            <h1>Bednah Kitonyi</h1>
-            <p class="tagline">Software QA Engineer</p>
+    <header id="main-header">
+        <div class="header-top">
+            <div class="brand">
+                <a href="index.html" class="brand-link">
+                    <img src="profilepic.jpg" alt="Bednah Kitonyi - Software QA Engineer" class="profile-pic">
+                    <div class="brand-text">
+                        <h1>Bednah Kitonyi</h1>
+                        <p class="tagline">Software QA Engineer</p>
+                    </div>
+                </a>
+            </div>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark theme" title="Toggle dark theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" title="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
         <nav role="navigation" class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resume.html">Resume</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
             </ul>
         </nav>
-        <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" title="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark theme" title="Toggle dark theme">
-            <span class="theme-icon">🌙</span>
-        </button>
     </header>
 
     <!-- Scroll to Top Button -->
