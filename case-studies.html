@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bednah Kitonyi Nzimbi">
+    <meta name="description" content="Case Studies - Bednah Kitonyi. Examples of quality assurance, testing automation, and risk-based testing.">
+    <title>Case Studies - Bednah Kitonyi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="profilepic.jpg" alt="Bednah Kitonyi - Software QA Engineer">
+            <h1>Bednah Kitonyi</h1>
+            <p class="tagline">Software QA Engineer</p>
+        </div>
+        <nav role="navigation" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" title="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark theme" title="Toggle dark theme">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </header>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
+        <span>↑</span>
+    </button>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="case-studies">
+        <h2>Case Studies</h2>
+        <p class="intro-text">Selected examples of how I approach quality, risk, and testing strategy.</p>
+        
+        <!-- Filter Buttons -->
+        <div class="case-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="manual">Manual Testing</button>
+            <button class="filter-btn" data-filter="automation">Automation</button>
+            <button class="filter-btn" data-filter="api">API Testing</button>
+        </div>
+        
+        <div class="featured-work">
+            <div class="case-card" data-category="manual" data-read-time="8">
+                <div class="difficulty-badge difficulty-intermediate">Intermediate</div>
+                <h3>E-commerce Web App</h3>
+                <p class="case-type">Functional & Exploratory Testing</p>
+                <p class="read-time">📖 8 min read</p>
+                <div class="case-actions">
+                    <a href="#case-ecommerce" class="btn-link">View Details →</a>
+                    <button class="share-btn" data-url="#case-ecommerce" data-title="E-commerce Web App Testing">Share</button>
+                </div>
+            </div>
+            <div class="case-card" data-category="api" data-read-time="10">
+                <div class="difficulty-badge difficulty-advanced">Advanced</div>
+                <h3>REST API</h3>
+                <p class="case-type">API & Integration Testing</p>
+                <p class="read-time">📖 10 min read</p>
+                <div class="case-actions">
+                    <a href="#case-api" class="btn-link">View Details →</a>
+                    <button class="share-btn" data-url="#case-api" data-title="REST API Testing Case Study">Share</button>
+                </div>
+            </div>
+            <div class="case-card" data-category="manual" data-read-time="7">
+                <div class="difficulty-badge difficulty-beginner">Beginner</div>
+                <h3>Mobile App</h3>
+                <p class="case-type">Regression & Usability Testing</p>
+                <p class="read-time">📖 7 min read</p>
+                <div class="case-actions">
+                    <a href="#case-mobile" class="btn-link">View Details →</a>
+                    <button class="share-btn" data-url="#case-mobile" data-title="Mobile App Testing Case Study">Share</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study Details -->
+        <div class="case-details">
+            <div id="case-ecommerce" class="case-study">
+                <h3>E-commerce Web App</h3>
+                <h4>Project Type</h4>
+                <p>Functional & Exploratory Testing - Full-stack e-commerce platform</p>
+                
+                <h4>Product Overview</h4>
+                <ul>
+                    <li><strong>What it does:</strong> Online marketplace for retail products with user accounts, shopping cart, and payment processing</li>
+                    <li><strong>Target Users:</strong> E-commerce customers and merchant partners</li>
+                    <li><strong>Key Risks:</strong> Payment security, data integrity, cross-browser compatibility</li>
+                </ul>
+                
+                <h4>Test Strategy</h4>
+                <ul>
+                    <li><strong>Scope & Priorities:</strong> Critical payment flows, user authentication, cart management</li>
+                    <li><strong>Risk-Based Decisions:</strong> Prioritized security and payment functionality over cosmetic elements</li>
+                    <li><strong>Out of Scope:</strong> Third-party payment gateway internals, legacy feature cleanup</li>
+                </ul>
+                
+                <h4>Test Design</h4>
+                <ul>
+                    <li>Test scenarios covering happy path and error conditions</li>
+                    <li>Edge cases: Invalid inputs, boundary values, concurrent transactions</li>
+                    <li>Exploratory testing charters focused on user workflows</li>
+                </ul>
+                
+                <h4>Defect Examples</h4>
+                <div class="defect-example">
+                    <p><strong>Bug #1 - Payment Processing Failure:</strong> Severity: Critical</p>
+                    <p>Users unable to complete purchases with certain credit card formats. Root cause: Regex validation too strict.</p>
+                </div>
+                <div class="defect-example">
+                    <p><strong>Bug #2 - Cart Item Persistence:</strong> Severity: High</p>
+                    <p>Items disappeared from cart on page refresh. Affected localStorage sync.</p>
+                </div>
+                
+                <h4>Outcome & Learnings</h4>
+                <ul>
+                    <li>Prevented critical payment issues before production launch</li>
+                    <li>Improved test coverage from 65% to 92% for checkout flow</li>
+                    <li>Established risk-based prioritization framework for future releases</li>
+                </ul>
+            </div>
+
+            <div id="case-api" class="case-study">
+                <h3>REST API Testing</h3>
+                <h4>Project Type</h4>
+                <p>API & Integration Testing - Microservices architecture</p>
+                
+                <h4>Product Overview</h4>
+                <ul>
+                    <li><strong>What it does:</strong> Backend API serving multiple client applications</li>
+                    <li><strong>Target Users:</strong> Frontend developers and partner integrations</li>
+                    <li><strong>Key Risks:</strong> Data consistency, authentication, rate limiting</li>
+                </ul>
+                
+                <h4>Test Strategy</h4>
+                <ul>
+                    <li>Comprehensive API contract testing with Postman</li>
+                    <li>Integration testing between microservices</li>
+                    <li>Load and stress testing for critical endpoints</li>
+                </ul>
+                
+                <h4>Tools & Environment</h4>
+                <ul>
+                    <li>Postman for API testing and documentation</li>
+                    <li>JUnit for integration tests</li>
+                    <li>Docker containers for test environment</li>
+                </ul>
+                
+                <h4>Outcome & Learnings</h4>
+                <ul>
+                    <li>Identified 15 API compatibility issues before integration</li>
+                    <li>Reduced API-related bugs by 80% in production</li>
+                    <li>Established automated API testing in CI/CD pipeline</li>
+                </ul>
+            </div>
+
+            <div id="case-mobile" class="case-study">
+                <h3>Mobile App Testing</h3>
+                <h4>Project Type</h4>
+                <p>Regression & Usability Testing - iOS & Android</p>
+                
+                <h4>Product Overview</h4>
+                <ul>
+                    <li><strong>What it does:</strong> Native mobile application for service booking</li>
+                    <li><strong>Target Users:</strong> Mobile-first audience, multiple device types</li>
+                    <li><strong>Key Risks:</strong> Device compatibility, network resilience, performance</li>
+                </ul>
+                
+                <h4>Test Strategy</h4>
+                <ul>
+                    <li>Cross-device testing on real devices and emulators</li>
+                    <li>Network condition simulation (3G, 4G, offline)</li>
+                    <li>Exploratory testing for UX issues</li>
+                </ul>
+                
+                <h4>Defect Examples</h4>
+                <div class="defect-example">
+                    <p><strong>Bug #1 - Orientation Crash:</strong> Severity: High</p>
+                    <p>App crashes when rotating device during data load.</p>
+                </div>
+                <div class="defect-example">
+                    <p><strong>Bug #2 - Offline Mode:</strong> Severity: Medium</p>
+                    <p>Cached data not displayed when offline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automation Section -->
+    <section id="automation" class="automation">
+        <h2>Test Automation</h2>
+        <p class="intro-text">Automation examples demonstrating framework design and test coverage.</p>
+        
+        <div class="automation-repo">
+            <h3><a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer">GitHub: Test Automation Frameworks</a></h3>
+            <ul>
+                <li><strong>Tech Stack:</strong> Selenium, Java, TestNG, Maven</li>
+                <li><strong>How to Run:</strong> Clone repo, run `mvn test`</li>
+                <li><strong>CI/CD Integration:</strong> GitHub Actions for automated test runs on pull requests</li>
+            </ul>
+            
+            <h4>Design Decisions</h4>
+            <ul>
+                <li><strong>Framework Choice:</strong> Page Object Model for maintainability and scalability</li>
+                <li><strong>Automated vs Manual:</strong> Regression tests automated, exploratory testing remains manual</li>
+                <li><strong>Coverage Focus:</strong> Critical user journeys and API integration points</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact-details">
+                <h3>Get In Touch</h3>
+                <address>
+                    <p><strong>Email:</strong> <a href="mailto:bednahkitonyi@gmail.com">bednahkitonyi@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+254727523766">+254 727 523 766</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bednah-nzimbi/" target="_blank" rel="noopener noreferrer">Bednah Nzimbi</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer">bednahkitonyi</a></p>
+                </address>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bednah Kitonyi | Software QA Engineer</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/shared.js"></script>
+</body>
+</html>

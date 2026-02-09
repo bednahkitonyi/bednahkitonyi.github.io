@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bednah Kitonyi Nzimbi">
+    <meta name="description" content="Contact - Bednah Kitonyi. Get in touch with me for QA and testing opportunities.">
+    <title>Contact - Bednah Kitonyi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="profilepic.jpg" alt="Bednah Kitonyi - Software QA Engineer">
+            <h1>Bednah Kitonyi</h1>
+            <p class="tagline">Software QA Engineer</p>
+        </div>
+        <nav role="navigation" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" title="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark theme" title="Toggle dark theme">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </header>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
+        <span>↑</span>
+    </button>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <p class="intro-text">I'm always interested in hearing about new QA opportunities, testing challenges, or collaboration ideas. Feel free to reach out!</p>
+        
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h3>Send me a Message</h3>
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            placeholder="Your Full Name"
+                            aria-label="Your name"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="your.email@example.com"
+                            aria-label="Your email address"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            required 
+                            placeholder="What is this about?"
+                            aria-label="Message subject"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="6" 
+                            required 
+                            placeholder="Tell me more about your inquiry..."
+                            aria-label="Your message"
+                        ></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+                <p class="form-note">I typically respond within 24-48 hours. Please include relevant details about your inquiry so I can assist you better.</p>
+            </div>
+            
+            <!-- Direct Contact Info -->
+            <div class="contact-info-wrapper">
+                <h3>Direct Contact</h3>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <h4>Email</h4>
+                        <p><a href="mailto:bednahkitonyi@gmail.com" class="contact-link">bednahkitonyi@gmail.com</a></p>
+                        <p class="contact-desc">Best for detailed inquiries and project discussions</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h4>Phone</h4>
+                        <p><a href="tel:+254727523766" class="contact-link">+254 727 523 766</a></p>
+                        <p class="contact-desc">For quick conversations or scheduling</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h4>LinkedIn</h4>
+                        <p><a href="https://www.linkedin.com/in/bednah-nzimbi/" target="_blank" rel="noopener noreferrer" class="contact-link">Connect on LinkedIn</a></p>
+                        <p class="contact-desc">Let's network and stay connected</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h4>GitHub</h4>
+                        <p><a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer" class="contact-link">View My GitHub</a></p>
+                        <p class="contact-desc">Check out my automation frameworks and code</p>
+                    </div>
+                </div>
+                
+                <div class="availability-card">
+                    <h4>Availability</h4>
+                    <ul>
+                        <li>📅 Open to freelance projects</li>
+                        <li>🤝 Available for consulting</li>
+                        <li>👥 Interested in mentoring opportunities</li>
+                        <li>💼 Open to full-time positions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Response Options -->
+        <div class="quick-response">
+            <h3>What Can I Help You With?</h3>
+            <div class="help-options">
+                <div class="option-card">
+                    <h4>Test Strategy & Planning</h4>
+                    <p>Need help designing comprehensive testing strategies and risk-based approaches?</p>
+                </div>
+                <div class="option-card">
+                    <h4>Automation Framework Development</h4>
+                    <p>Looking to implement or improve test automation frameworks?</p>
+                </div>
+                <div class="option-card">
+                    <h4>Team Training & Mentoring</h4>
+                    <p>Want to develop your QA team's skills and best practices?</p>
+                </div>
+                <div class="option-card">
+                    <h4>Testing Consulting</h4>
+                    <p>Need expert advice on QA processes or quality improvements?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact-details">
+                <h3>Contact Alternative</h3>
+                <address>
+                    <p><strong>Email:</strong> <a href="mailto:bednahkitonyi@gmail.com">bednahkitonyi@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+254727523766">+254 727 523 766</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bednah-nzimbi/" target="_blank" rel="noopener noreferrer">Bednah Nzimbi</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer">bednahkitonyi</a></p>
+                </address>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bednah Kitonyi | Software QA Engineer</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bednah Kitonyi Nzimbi">
+    <meta name="description" content="About Bednah Kitonyi - Software QA Engineer. Experience, education, skills, and professional philosophy.">
+    <title>About - Bednah Kitonyi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="profilepic.jpg" alt="Bednah Kitonyi - Software QA Engineer">
+            <h1>Bednah Kitonyi</h1>
+            <p class="tagline">Software QA Engineer</p>
+        </div>
+        <nav role="navigation" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" title="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark theme" title="Toggle dark theme">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </header>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
+        <span>↑</span>
+    </button>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        
+        <h3>Professional Summary</h3>
+        <p>I am a Software QA Engineer with a passion for quality assurance, test strategy, and risk-based testing. I believe in shipping reliable products through comprehensive testing, clear communication, and continuous improvement. My approach combines manual expertise with automation capabilities to maximize quality and efficiency.</p>
+        
+        <!-- Interactive Timeline -->
+        <h3>Career Timeline</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2024 - Present</div>
+                <div class="timeline-content">
+                    <h4>Senior QA Engineer</h4>
+                    <p>Techno Brain Group - Lead QA initiatives and mentoring junior engineers</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - 2024</div>
+                <div class="timeline-content">
+                    <h4>QA Automation Engineer</h4>
+                    <p>Software Testing Professional - API and automation testing</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2021 - 2022</div>
+                <div class="timeline-content">
+                    <h4>Junior QA Engineer</h4>
+                    <p>Started QA career with manual and functional testing</p>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Professional Experience</h3>
+        <div class="experience-item">
+            <h4>Software QA Engineer </h4>
+            <p class="experience-detail">Techno Brain Group | 4+ years</p>
+            <ul>
+                <li>Led manual and automated testing efforts for web and mobile applications</li>
+                <li>Designed comprehensive test strategies based on risk assessment and product requirements</li>
+                <li>Implemented test automation frameworks using Selenium and JUnit</li>
+                <li>Mentored junior QA engineers and established QA best practices</li>
+                <li>Collaborated with product and development teams in Agile environments</li>
+                <li>Reduced production defects by 45% through improved test coverage</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <h4>QA Automation Engineer</h4>
+            <p class="experience-detail">Software Testing Professional | 1+ years</p>
+            <ul>
+                <li>Developed and maintained automated test suites for regression testing</li>
+                <li>Performed API testing using Postman and REST client tools</li>
+                <li>Conducted performance and load testing on critical applications</li>
+                <li>Integrated automated tests into CI/CD pipelines using GitHub Actions</li>
+                <li>Created detailed test documentation and test execution reports</li>
+            </ul>
+        </div>
+
+        <h3>Education</h3>
+        <div class="education-item-expanded">
+            <h4>Bachelor of Science in Computer Science</h4>
+            <p><strong>Machakos University</strong> | Graduated 2018</p>
+            <p>Major: Mathematics and Computer Science</p>
+            <p>Focus areas: Software development, algorithms, data structures, and systems design</p>
+        </div>
+        
+        <h3>Certifications & Training</h3>
+        <div class="certifications-list">
+            <div class="cert-item">
+                <h4>ISTQB Certified Tester</h4>
+                <p>Foundation Level (CTFL) - Quality Assurance Testing</p>
+            </div>
+            <div class="cert-item">
+                <h4>Selenium Test Automation</h4>
+                <p>Advanced framework design and best practices</p>
+            </div>
+            <div class="cert-item">
+                <h4>API Testing with Postman</h4>
+                <p>REST API testing, automation, and CI/CD integration</p>
+            </div>
+            <div class="cert-item">
+                <h4>Accessibility Testing (WCAG 2.1)</h4>
+                <p>Web Content Accessibility Guidelines compliance</p>
+            </div>
+        </div>
+        
+        <h3>Testing Philosophy</h3>
+        <p>I believe that quality is not just about finding bugs—it's about understanding user needs, mitigating risks, and building confidence in software. My approach focuses on:</p>
+        <ul>
+            <li><strong>Risk-Based Testing:</strong> Prioritizing testing efforts where they matter most</li>
+            <li><strong>User-Centric Quality:</strong> Testing from the perspective of end users</li>
+            <li><strong>Continuous Improvement:</strong> Learning from each project and refining processes</li>
+            <li><strong>Clear Communication:</strong> Making testing insights accessible to all stakeholders</li>
+            <li><strong>Balanced Automation:</strong> Knowing when to automate and when manual testing is more valuable</li>
+        </ul>
+        
+        <h3>How I Work</h3>
+        <ul>
+            <li><strong>Collaboration:</strong> I work closely with developers and product managers to understand requirements and align on testing priorities.</li>
+            <li><strong>Handling Ambiguity:</strong> When requirements are unclear, I ask clarifying questions and document assumptions to prevent testing gaps.</li>
+            <li><strong>Communication:</strong> I provide clear, actionable defect reports and explain testing decisions in business terms.</li>
+            <li><strong>Proactive Quality:</strong> I identify potential issues early through exploratory testing and continuous learning.</li>
+            <li><strong>Mentorship:</strong> I enjoy helping junior QA engineers develop their skills and understanding of quality principles.</li>
+        </ul>
+        
+        <h3>Core Skills</h3>
+        <div class="skills-list">
+            <span class="skill-tag">Manual Testing</span>
+            <span class="skill-tag">Exploratory Testing</span>
+            <span class="skill-tag">API Testing</span>
+            <span class="skill-tag">Test Automation</span>
+            <span class="skill-tag">Performance Testing</span>
+            <span class="skill-tag">Risk-Based Testing</span>
+            <span class="skill-tag">Test Design</span>
+            <span class="skill-tag">Accessibility Testing</span>
+            <span class="skill-tag">Selenium</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Agile/Scrum</span>
+        </div>
+        
+        <h3>Tools & Technologies</h3>
+        <div class="tools-grid">
+            <div class="tool-category">
+                <h4>Test Automation</h4>
+                <p>Selenium WebDriver, Cypress, JUnit, TestNG</p>
+            </div>
+            <div class="tool-category">
+                <h4>API Testing</h4>
+                <p>Postman, REST Client, cURL, SoapUI</p>
+            </div>
+            <div class="tool-category">
+                <h4>Test Management</h4>
+                <p>Jira, TestRail, Azure DevOps</p>
+            </div>
+            <div class="tool-category">
+                <h4>Performance & Load</h4>
+                <p>JMeter, LoadRunner, Chrome DevTools</p>
+            </div>
+            <div class="tool-category">
+                <h4>CI/CD</h4>
+                <p>GitHub Actions, Jenkins, GitLab CI</p>
+            </div>
+            <div class="tool-category">
+                <h4>Programming Languages</h4>
+                <p>Java, Python, C#, SQL</p>
+            </div>
+        </div>
+        
+        <h3>Continuous Learning</h3>
+        <p>I am committed to staying current with industry trends and best practices. I regularly:</p>
+        <ul>
+            <li>Participate in QA and testing communities</li>
+            <li>Explore emerging testing tools and frameworks</li>
+            <li>Study accessibility and performance optimization techniques</li>
+            <li>Share knowledge through mentoring and documentation</li>
+            <li>Investigate new testing methodologies and approaches</li>
+        </ul>
+        
+        <h3>Testimonials</h3>
+        <div class="testimonials-carousel">
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <p>"Bednah's meticulous approach to testing uncovered critical issues before production. Their risk-based strategy saved us significant time and resources."</p>
+                </div>
+                <div class="testimonial-author">
+                    <strong>Christine Karume</strong>
+                    <p>Software Quality Automation Engineer.</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <p>"Working with Bednah on our API testing was exceptional. Clear documentation, comprehensive test coverage, and proactive bug detection."</p>
+                </div>
+                <div class="testimonial-author">
+                    <strong>Trevelyan Odero</strong>
+                    <p>Senior QA Engineer.</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <p>"Bednah's automation framework reduced our regression testing time by 60%. Highly recommended for any team looking to improve QA efficiency."</p>
+                </div>
+                <div class="testimonial-author">
+                    <strong>Emily Roberts</strong>
+                    <p>QA Manager, Digital Innovations</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="carousel-prev" aria-label="Previous testimonial">❮</button>
+            <button class="carousel-next" aria-label="Next testimonial">❯</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact-details">
+                <h3>Get In Touch</h3>
+                <address>
+                    <p><strong>Email:</strong> <a href="mailto:bednahkitonyi@gmail.com">bednahkitonyi@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+254727523766">+254 727 523 766</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bednah-nzimbi/" target="_blank" rel="noopener noreferrer">Bednah Nzimbi</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer">bednahkitonyi</a></p>
+                </address>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bednah Kitonyi | Software QA Engineer</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/shared.js"></script>
+</body>
+</html>
