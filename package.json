@@ -4,6 +4,8 @@
   "description": "Personal portfolio website with QA expertise showcase",
   "main": "index.html",
   "scripts": {
+    "build:css": "tailwindcss -i ./tailwind-input.css -o ./styles.css",
+    "watch:css": "tailwindcss -i ./tailwind-input.css -o ./styles.css --watch",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -19,10 +21,14 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.23.0",
+    "@tailwindcss/postcss": "^4.1.18",
     "@testing-library/dom": "^9.3.3",
     "@testing-library/user-event": "^14.5.1",
+    "autoprefixer": "^10.4.24",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0"
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
   }
 }

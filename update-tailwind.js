@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Bednah Kitonyi Nzimbi">
-    <meta name="description" content="Contact - Bednah Kitonyi. Get in touch with me for QA and testing opportunities.">
-    <title>Contact - Bednah Kitonyi</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const savedTheme = localStorage.getItem('theme');
-        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-    </script>
-</head>
-<body class="transition-colors duration-300">
-    <header id="main-header" class="bg-white dark:bg-dark-surface border-b border-gray-200 dark:border-gray-700">
+const fs = require('fs');
+const path = require('path');
+
+// Header template
+const headerTemplate = `<header id="main-header" class="bg-white dark:bg-dark-surface border-b border-gray-200 dark:border-gray-700">
         <div class="header-top flex items-center justify-between py-4 px-6 bg-white dark:bg-dark-surface border-b border-gray-200 dark:border-gray-700">
             <div class="brand flex items-center gap-4">
                 <a href="index.html" class="brand-link flex items-center gap-4 text-gray-900 dark:text-gray-100 no-underline hover:opacity-80 transition-opacity">
@@ -46,142 +33,10 @@
                 <li><a href="resume.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors no-underline relative">Resume</a></li>
             </ul>
         </nav>
-    </header>
+    </header>`;
 
-    <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="scroll-to-top fixed bottom-6 right-6 w-10 h-10 bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center cursor-pointer transition-all opacity-0 translate-y-2 pointer-events-none" aria-label="Scroll to top" title="Scroll to top">
-        <span>↑</span>
-    </button>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <p class="intro-text">I'm always interested in hearing about new QA opportunities, testing challenges, or collaboration ideas. Feel free to reach out!</p>
-        
-        <div class="contact-container">
-            <!-- Contact Form -->
-            <div class="contact-form-wrapper">
-                <h3>Send me a Message</h3>
-                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input 
-                            type="text" 
-                            id="name" 
-                            name="name" 
-                            required 
-                            placeholder="Your Full Name"
-                            aria-label="Your name"
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            required 
-                            placeholder="your.email@example.com"
-                            aria-label="Your email address"
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <input 
-                            type="text" 
-                            id="subject" 
-                            name="subject" 
-                            required 
-                            placeholder="What is this about?"
-                            aria-label="Message subject"
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            rows="6" 
-                            required 
-                            placeholder="Tell me more about your inquiry..."
-                            aria-label="Your message"
-                        ></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
-                <p class="form-note">I typically respond within 24-48 hours. Please include relevant details about your inquiry so I can assist you better.</p>
-            </div>
-            
-            <!-- Direct Contact Info -->
-            <div class="contact-info-wrapper">
-                <h3>Direct Contact</h3>
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <h4>Email</h4>
-                        <p><a href="mailto:bednahkitonyi@gmail.com" class="contact-link">bednahkitonyi@gmail.com</a></p>
-                        <p class="contact-desc">Best for detailed inquiries and project discussions</p>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <h4>Phone</h4>
-                        <p><a href="tel:+254727523766" class="contact-link">+254 727 523 766</a></p>
-                        <p class="contact-desc">For quick conversations or scheduling</p>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <h4>LinkedIn</h4>
-                        <p><a href="https://www.linkedin.com/in/bednah-nzimbi/" target="_blank" rel="noopener noreferrer" class="contact-link">Connect on LinkedIn</a></p>
-                        <p class="contact-desc">Let's network and stay connected</p>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <h4>GitHub</h4>
-                        <p><a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer" class="contact-link">View My GitHub</a></p>
-                        <p class="contact-desc">Check out my automation frameworks and code</p>
-                    </div>
-                </div>
-                
-                <div class="availability-card">
-                    <h4>Availability</h4>
-                    <ul>
-                        <li>📅 Open to freelance projects</li>
-                        <li>🤝 Available for consulting</li>
-                        <li>👥 Interested in mentoring opportunities</li>
-                        <li>💼 Open to full-time positions</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Quick Response Options -->
-        <div class="quick-response">
-            <h3>What Can I Help You With?</h3>
-            <div class="help-options">
-                <div class="option-card">
-                    <h4>Test Strategy & Planning</h4>
-                    <p>Need help designing comprehensive testing strategies and risk-based approaches?</p>
-                </div>
-                <div class="option-card">
-                    <h4>Automation Framework Development</h4>
-                    <p>Looking to implement or improve test automation frameworks?</p>
-                </div>
-                <div class="option-card">
-                    <h4>Team Training & Mentoring</h4>
-                    <p>Want to develop your QA team's skills and best practices?</p>
-                </div>
-                <div class="option-card">
-                    <h4>Testing Consulting</h4>
-                    <p>Need expert advice on QA processes or quality improvements?</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 dark:bg-gray-950 text-gray-100 py-16 px-6 mt-20">
+// Footer template
+const footerTemplate = `<footer class="bg-gray-900 dark:bg-gray-950 text-gray-100 py-16 px-6 mt-20">
         <div class="footer-container max-w-6xl mx-auto grid md:grid-cols-3 gap-12 mb-8">
             <div class="footer-column footer-info">
                 <h2 class="text-xl font-bold mb-4">Bednah Kitonyi</h2>
@@ -234,8 +89,48 @@
         <div class="footer-bottom border-t border-gray-700 pt-8 text-center text-gray-400">
             <p>&copy; 2026 Bednah Kitonyi | Software QA Engineer</p>
         </div>
-    </footer>
+    </footer>`;
 
-    <script src="js/shared.js"></script>
-</body>
-</html>
+function updateFile(filePath, navLink) {
+    try {
+        let content = fs.readFileSync(filePath, 'utf8');
+
+        // Add scroll classes to html and body
+        content = content.replace(/<html lang="en">/, '<html lang="en" class="scroll-smooth">');
+        content = content.replace(/<body>/, '<body class="transition-colors duration-300">');
+
+        // Replace header
+        content = content.replace(/<header id="main-header">([\s\S]*?)<\/header>/, headerTemplate.replace('class="nav-link"', `class="nav-link${navLink ? ' active text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors no-underline relative font-semibold text-primary-600 dark:text-primary-400' : ' text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors no-underline relative'}"`));
+
+        // Replace footer
+        content = content.replace(/<footer>([\s\S]*?)<\/footer>/, footerTemplate);
+
+        // Replace scroll-to-top button
+        content = content.replace(/<button id="scroll-to-top"[^>]*>[\s\S]*?<\/button>/, '<button id="scroll-to-top" class="scroll-to-top fixed bottom-6 right-6 w-10 h-10 bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center cursor-pointer transition-all opacity-0 translate-y-2 pointer-events-none" aria-label="Scroll to top" title="Scroll to top">\n        <span>↑</span>\n    </button>');
+
+        fs.writeFileSync(filePath, content, 'utf8');
+        return true;
+    } catch (err) {
+        console.error(`Error updating ${filePath}:`, err.message);
+        return false;
+    }
+}
+
+// Update all relevant files
+const files = [
+    { path: 'about.html', nav: 'About' },
+    { path: 'case-studies.html', nav: 'Case Studies' },
+    { path: 'contact.html', nav: 'Contact' },
+    { path: 'resume.html', nav: 'Resume' },
+    { path: '404.html', nav: null }
+];
+
+files.forEach(file => {
+    if (fs.existsSync(file.path)) {
+        if (updateFile(file.path, file.nav)) {
+            console.log(`✓ ${file.path} updated successfully`);
+        } else {
+            console.log(`✗ Failed to update ${file.path}`);
+        }
+    }
+});

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -123,7 +123,7 @@
         document.documentElement.setAttribute('data-theme', theme);
     </script>
 </head>
-<body>
+<body class="transition-colors duration-300">
     <header>
         <div class="container">
             <h1>Resume</h1>
@@ -152,57 +152,57 @@
         </div>
     </main>
 
-        <footer>
-        <div class="footer-container">
+        <footer class="bg-gray-900 dark:bg-gray-950 text-gray-100 py-16 px-6 mt-20">
+        <div class="footer-container max-w-6xl mx-auto grid md:grid-cols-3 gap-12 mb-8">
             <div class="footer-column footer-info">
-                <h2>Bednah Kitonyi</h2>
-                <p class="footer-bio">Serious about QA. 3+ years of expertise in test automation, risk-based testing, and quality assurance.</p>
+                <h2 class="text-xl font-bold mb-4">Bednah Kitonyi</h2>
+                <p class="footer-bio text-gray-300 mb-6">Serious about QA. 3+ years of expertise in test automation, risk-based testing, and quality assurance.</p>
                 <div class="footer-contact">
-                    <div class="contact-item">
-                        <span class="contact-label">ADDRESS</span>
-                        <p>Nairobi, Kenya 🇰🇪</p>
+                    <div class="contact-item mb-4">
+                        <span class="contact-label text-gray-400 text-sm font-semibold">ADDRESS</span>
+                        <p class="text-gray-200 mb-0">Nairobi, Kenya 🇰🇪</p>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-label">PHONE</span>
-                        <p><a href="tel:+254727523766">+254 727 523 766</a></p>
+                    <div class="contact-item mb-4">
+                        <span class="contact-label text-gray-400 text-sm font-semibold">PHONE</span>
+                        <p class="text-gray-200 mb-0"><a href="tel:+254727523766" class="text-primary-300 hover:text-primary-400 no-underline transition-colors">+254 727 523 766</a></p>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-label">E-MAIL</span>
-                        <p><a href="mailto:bednahkitonyi@gmail.com">bednahkitonyi@gmail.com</a></p>
+                    <div class="contact-item mb-4">
+                        <span class="contact-label text-gray-400 text-sm font-semibold">E-MAIL</span>
+                        <p class="text-gray-200 mb-0"><a href="mailto:bednahkitonyi@gmail.com" class="text-primary-300 hover:text-primary-400 no-underline transition-colors">bednahkitonyi@gmail.com</a></p>
                     </div>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/bednah-nzimbi/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">in</a>
-                    <a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">⚙️</a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Twitter">𝕏</a>
-                    <a href="mailto:bednahkitonyi@gmail.com" class="social-icon" title="Email">✉️</a>
+                <div class="social-links flex gap-4 mt-6">
+                    <a href="https://www.linkedin.com/in/bednah-nzimbi/" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-full bg-gray-700 hover:bg-primary-600 flex items-center justify-center text-white no-underline transition-colors" title="LinkedIn">in</a>
+                    <a href="https://github.com/bednahkitonyi" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-full bg-gray-700 hover:bg-primary-600 flex items-center justify-center text-white no-underline transition-colors" title="GitHub">⚙️</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-full bg-gray-700 hover:bg-primary-600 flex items-center justify-center text-white no-underline transition-colors" title="Twitter">𝕏</a>
+                    <a href="mailto:bednahkitonyi@gmail.com" class="social-icon w-10 h-10 rounded-full bg-gray-700 hover:bg-primary-600 flex items-center justify-center text-white no-underline transition-colors" title="Email">✉️</a>
                 </div>
             </div>
 
             <div class="footer-column footer-form">
-                <h3>Questions? Contact Us</h3>
-                <form class="footer-contact-form" action="#" method="POST">
-                    <input type="text" name="name" placeholder="Name" required aria-label="Full Name">
-                    <input type="email" name="email" placeholder="E-mail" required aria-label="Email Address">
-                    <textarea name="message" placeholder="Message" rows="4" required aria-label="Your Message"></textarea>
-                    <button type="submit" class="btn-submit">SEND MESSAGE</button>
+                <h3 class="text-xl font-bold mb-4">Questions? Contact Us</h3>
+                <form class="footer-contact-form space-y-4" action="#" method="POST">
+                    <input type="text" name="name" placeholder="Name" required aria-label="Full Name" class="w-full px-4 py-2 bg-gray-800 text-gray-100 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors">
+                    <input type="email" name="email" placeholder="E-mail" required aria-label="Email Address" class="w-full px-4 py-2 bg-gray-800 text-gray-100 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors">
+                    <textarea name="message" placeholder="Message" rows="4" required aria-label="Your Message" class="w-full px-4 py-2 bg-gray-800 text-gray-100 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors"></textarea>
+                    <button type="submit" class="btn-submit w-full px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors cursor-pointer">SEND MESSAGE</button>
                 </form>
             </div>
 
             <div class="footer-column footer-highlights">
-                <h3>Highlights</h3>
+                <h3 class="text-xl font-bold mb-4">Highlights</h3>
                 <nav class="highlights-nav">
-                    <ul>
-                        <li><a href="about.html">Who we are</a></li>
-                        <li><a href="case-studies.html">What we do</a></li>
-                        <li><a href="case-studies.html">What we've done</a></li>
-                        <li><a href="contact.html">Get in touch</a></li>
-                        <li><a href="resume.html">Resume</a></li>
+                    <ul class="list-none p-0 m-0 space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-primary-400 no-underline transition-colors">Who we are</a></li>
+                        <li><a href="case-studies.html" class="text-gray-300 hover:text-primary-400 no-underline transition-colors">What we do</a></li>
+                        <li><a href="case-studies.html" class="text-gray-300 hover:text-primary-400 no-underline transition-colors">What we've done</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary-400 no-underline transition-colors">Get in touch</a></li>
+                        <li><a href="resume.html" class="text-gray-300 hover:text-primary-400 no-underline transition-colors">Resume</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-bottom border-t border-gray-700 pt-8 text-center text-gray-400">
             <p>&copy; 2026 Bednah Kitonyi | Software QA Engineer</p>
         </div>
     </footer>
