@@ -6,10 +6,12 @@
   "scripts": {
     "build:css": "tailwindcss -i ./tailwind-input.css -o ./styles.css",
     "watch:css": "tailwindcss -i ./tailwind-input.css -o ./styles.css --watch",
+    "build": "npm run build:css && echo '✓ Build complete'",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:ci": "jest --ci --coverage --maxWorkers=2"
+    "test:ci": "jest --ci --coverage --maxWorkers=2",
+    "lint:html": "echo 'HTML validation can be added with html-validate package'"
   },
   "keywords": [
     "portfolio",

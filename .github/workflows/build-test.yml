@@ -1,0 +1,73 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    # Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Setup Node.js
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    # Install dependencies
+    - name: Install dependencies
+      run: npm ci
+
+    # Build CSS with Tailwind
+    - name: Build Tailwind CSS
+      run: npm run build:css
+      continue-on-error: false
+
+    # Run tests
+    - name: Run tests
+      run: npm test -- --coverage
+      continue-on-error: false
+
+    # Upload coverage to codecov (optional)
+    - name: Upload coverage reports
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./coverage/coverage-final.json
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: false
+
+    # Lint HTML files (optional but recommended)
+    - name: Check HTML validity
+      run: |
+        if command -v html-validate &> /dev/null; then
+          html-validate "*.html"
+        else
+          echo "HTML validator not installed, skipping validation"
+        fi
+      continue-on-error: true
+
+  # Optional: Deploy to GitHub Pages (uncomment if using GitHub Pages)
+  # deploy:
+  #   needs: build-test
+  #   runs-on: ubuntu-latest
+  #   if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Deploy to GitHub Pages
+  #       uses: peaceiris/actions-gh-pages@v3
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         publish_dir: ./
