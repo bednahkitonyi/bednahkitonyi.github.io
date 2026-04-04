@@ -14,14 +14,6 @@
         const theme = savedTheme || (prefersDark ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', theme);
     </script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
 </head>
 <body class="transition-colors duration-300">
     <header id="main-header" class="bg-white dark:bg-dark-surface border-b border-gray-200 dark:border-gray-700">
@@ -220,5 +212,6 @@
 
     <script src="js/shared.js"></script>
     <script src="js/contact-form.js"></script>
+    <script src="js/analytics.js"></script>
 </body>
 </html>
